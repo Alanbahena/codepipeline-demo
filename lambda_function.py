@@ -1,9 +1,10 @@
-import json
+import json 
 import datetime
-
-def handler(event, context):
+def lambda_handler(event, context):
+    # TODO implement 
+    print(event)
     data = {
-        'output': 'AWS CodePipeline Rocks! and it was created by Alan!',
+        'output': 'Hello from '+ event['Country'],
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,

@@ -4,6 +4,7 @@ phases:
     commands:
       - pip install --upgrade awscli
       - export BUCKET=codepipeline-lambda-bucket-course
+      - python -m unittest discover tests
       - >-
         aws cloudformation package --template-file template.yml --s3-bucket
         $BUCKET --output-template-file template-out.yml
