@@ -3,7 +3,7 @@ import datetime
 
 def handler(event, context):
     data = {
-        'output': 'AWS CodePipeline Rocks! and it was created by Alan',
+        'output': 'AWS CodePipeline Rocks! and it was created by Alan!',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
